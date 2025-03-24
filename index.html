@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ristorante Yang</title>
+</head>
+<body>
+    <!-- PRESENTAZIONE -->
+    <div class="presentazione">
+        <h1>Ristorante Yang</h1>
+    </div>
+    <div class="title">
+    <h2 id="titolo">Compila il form per prenotare!</h2>
+    <p class="roll"></p>
+   </div> 
+    <!-- FORM -->
+    <div class="form">
+
+        <!-- FORM-->
+         <form action="">
+            <img class="menuImg" src="immagini/Schermata del 2025-03-19 16-38-30.png" alt="">
+            <button onclick="accedi()" class="accedi">Accedi</button>
+            <button onclick="registrati()" class="registrati">Registrati</button>
+            <label class="name" style="display: none;" for="name">Nome</label>
+            <input style="display: none;" class="inputform" type="text" id="name" name="name" required>
+            <label class="cognome" style="display: none;" for="surname">Cognome</label>
+            <input style="display: none;" class="inputform" type="text" id="surname" name="surname" required>
+            <label class="email" style="display: none;" for="email">Email</label>
+            <input style="display: none;" class="inputform" type="email" id="email" name="email" required>
+            <label class="phone" style="display: none;" for="phone">Telefono</label>
+            <input style="display: none;" class="inputform" type="tel" id="phone" name="phone" required>
+            <label class="date" style="display: none;" for="date">Data</label>
+            <input style="display: none;" class="inputform" type="date" id="date" name="date" required>
+            <label class="time" style="display: none;" for="time">Ora</label>
+            <input style="display: none;" class="inputform" type="time" id="time" name="time" required>
+            <label class="people" style="display: none;" for="people">Persone</label>
+            <input style="display: none;" class="inputform" type="number" id="people" name="people" required>
+            <label class="password" style="display: none;" for="password">Password</label>
+            <input style="display: none;" type="text" class="inputform" id="password" name="password" required>
+            <p class="passwordAlert"></p>
+            <p class="passwordErrata"></p>
+            <button onclick="checkPassword()" style="display: none;" class="entra">Conferma</button>
+            <button onclick="aggiungiPrenotazione()" style="display: none;" class="entra2">Conferma</button>
+            <input onclick="conferma()" type="submit" style="display: none;" class="conferma2" value="Conferma" disabled>
+            <button onclick="indietro()" style="display: none;" class="indietro">Indietro</button>
+         </form>
+    </div>
+    
+    <script>
+
+        window.onload = function() {
+            var today = new Date().toISOString().split('T')[0];
+            document.getElementById("date").setAttribute('min', today);
+        };
+
+        function salvaNelLocalStorage(chiave, valore) {
+        localStorage.setItem(chiave, JSON.stringify(valore));
+}
+function caricaDalLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave);
+    return valore ? JSON.parse(valore) : null;
+}
+
+        function accedi(){
+            document.getElementById("name").style.display = "none";
+            document.getElementsByClassName("name")[0].style.display = "none";
+            document.getElementById("email").style.display = "";
+            document.getElementsByClassName("email")[0].style.display = "";
+            document.getElementsByClassName("accedi")[0].style.display = "none";
+            document.getElementsByClassName("registrati")[0].style.display = "none";
+            document.getElementsByClassName("menuImg")[0].style.display = "none";
+            document.getElementsByClassName("password")[0].style.display = "";
+            document.getElementById("password").style.display = "";
+            document.getElementsByClassName("entra")[0].style.display = "";
+            document.getElementsByTagName("form")[0].reset();
+        }
+        function registrati(){
+            document.getElementsByClassName("passwordErrata")[0].style.display = "none";
+            document.getElementById("name").style.display = "";
+            document.getElementsByClassName("name")[0].style.display = "";
+            document.getElementsByClassName("accedi")[0].style.display = "none";
+            document.getElementsByClassName("registrati")[0].style.display = "none";
+            document.getElementsByClassName("menuImg")[0].style.display = "none";
+            document.getElementsByClassName("password")[0].style.display = "";
+            document.getElementById("password").style.display = "";
+            document.getElementsByClassName("cognome")[0].style.display = "";
+            document.getElementById("surname").style.display = "";
+            document.getElementsByClassName("email")[0].style.display = "";
+            document.getElementById("email").style.display = "";
+            document.getElementsByClassName("phone")[0].style.display = "";
+            document.getElementById("phone").style.display = "";
+            document.getElementsByClassName("conferma2")[0].style.display = "";
+            document.getElementsByClassName("indietro")[0].style.display = "";
+            document.getElementsByTagName("form")[0].reset();
+        }
+        function indietro(){
+            document.getElementById("name").style.display = "none";
+            document.getElementsByClassName("name")[0].style.display = "none";
+            document.getElementsByClassName("accedi")[0].style.display = "";
+            document.getElementsByClassName("registrati")[0].style.display = "";
+            document.getElementsByClassName("menuImg")[0].style.display = "";
+            document.getElementsByClassName("password")[0].style.display = "none";
+            document.getElementById("password").style.display = "none";
+            document.getElementsByClassName("cognome")[0].style.display = "none";
+            document.getElementById("surname").style.display = "none";
+            document.getElementsByClassName("email")[0].style.display = "none";
+            document.getElementById("email").style.display = "none";
+            document.getElementsByClassName("phone")[0].style.display = "none";
+            document.getElementById("phone").style.display = "none";
+            document.getElementsByClassName("conferma2")[0].style.display = "none";
+            document.getElementsByClassName("indietro")[0].style.display = "none";
+            document.getElementsByTagName("form")[0].reset();
+
+        }
+
+        document.getElementById("password").addEventListener("input", function(){
+            if(document.getElementById("password").value.length < 8){
+                document.getElementsByClassName("passwordAlert")[0].innerText = "La password deve contenere almeno 8 caratteri";
+            }else if(!/[A-Z]/.test(document.getElementById("password").value)){
+                document.getElementsByClassName("passwordAlert")[0].innerText = "La password deve contenere almeno una lettera maiuscola";
+            }else if(!/[0-9]/.test(document.getElementById("password").value)){
+                document.getElementsByClassName("passwordAlert")[0].innerText = "La password deve contenere almeno un numero";
+            }else if(!/[!@#$%^&*]/.test(document.getElementById("password").value)){
+                document.getElementsByClassName("passwordAlert")[0].innerText = "La password deve contenere almeno un carattere speciale";
+            }else{
+                document.getElementsByClassName("passwordAlert")[0].innerText = "";
+                document.getElementsByClassName("conferma2")[0].removeAttribute("disabled");
+            }
+        });
+
+        function conferma(){
+            document.getElementsByClassName("passwordErrata")[0].style.display = "";
+            document.getElementById("name").style.display = "none";
+            document.getElementsByClassName("name")[0].style.display = "none";
+            document.getElementsByClassName("accedi")[0].style.display = "";
+            document.getElementsByClassName("registrati")[0].style.display = "";
+            document.getElementsByClassName("menuImg")[0].style.display = "";
+            document.getElementsByClassName("password")[0].style.display = "none";
+            document.getElementById("password").style.display = "none";
+            document.getElementsByClassName("cognome")[0].style.display = "none";
+            document.getElementById("surname").style.display = "none";
+            document.getElementsByClassName("email")[0].style.display = "none";
+            document.getElementById("email").style.display = "none";
+            document.getElementsByClassName("phone")[0].style.display = "none";
+            document.getElementById("phone").style.display = "none";
+            document.getElementsByClassName("conferma2")[0].style.display = "none";
+            document.getElementsByClassName("indietro")[0].style.display = "none";
+            document.getElementsByClassName("conferma2")[0].setAttribute("disabled", "true");
+            salvaDati();
+           }
+
+    function salvaDati() {
+
+        //CREA CLASSE PERSONA
+
+        class Persona {
+    constructor(nome, cognome, email, telefono, password) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.email = email;
+        this.telefono = telefono;
+        this.password = password;
+        this.prenotazioni = [];}
+    }
+
+    //RECUPERA DATI DAL FORM
+   
+    const nome = document.getElementById("name").value;
+    const cognome = document.getElementById("surname").value;
+    const email = document.getElementById("email").value;
+    const telefono = document.getElementById("phone").value;
+    const password = document.getElementById("password").value;
+
+    //CONTROLLA EMAIL DI TUTTE LE PERSONE
+
+    function isUtenteRegistrato(email) {
+    return localStorage.getItem(email) !== null;
+                                                }
+
+//CONTROLLA EMAIL DELLA PERSONA CHE STA EFFETTUANDO LA REGISTRAZIONE
+
+if (isUtenteRegistrato(email)) {
+    
+    document.getElementsByClassName("passwordErrata")[0].textContent = "Utente già registrato"
+
+} else {
+  
+    // Crea un nuovo oggetto Persona
+    const persona = new Persona(nome, cognome, email, telefono, password);
+
+    // Salva l'oggetto nel localStorage
+    salvaNelLocalStorage(email, persona);
+
+}
+
+}
+
+function checkPassword() {
+    // Recupera i valori dal form
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Verifica se l'email esiste nel localStorage
+    const persona = JSON.parse(localStorage.getItem(email));
+
+    if (!persona) {
+        document.getElementsByClassName("passwordErrata")[0].style.display = "";
+        document.getElementsByClassName("passwordErrata")[0].textContent = "Utente non registrato.";
+        return false; // L'email non esiste
+    }
+
+    // Confronta la password
+    if (persona.password === password) {
+        document.getElementsByClassName("passwordErrata")[0].style.display = "none"
+        document.getElementsByClassName("entra")[0].style.display = "none"
+        document.getElementsByClassName("entra2")[0].style.display = ""
+        prenota();
+        return true; // Password corretta
+    } else {
+        document.getElementsByClassName("passwordErrata")[0].style.display = "";
+        document.getElementsByClassName("passwordErrata")[0].textContent = "Password errata.";
+        return false; // Password errata
+    }
+} 
+
+
+        function prenota(){
+            document.getElementsByClassName("email")[0].style.display = "none";
+            document.getElementById("email").style.display = "none";
+            document.getElementById("name").style.display = "none";
+            document.getElementsByClassName("name")[0].style.display = "none";
+            document.getElementsByClassName("password")[0].style.display = "none";
+            document.getElementById("password").style.display = "none";
+            document.getElementsByClassName("date")[0].style.display = "";
+            document.getElementById("date").style.display = "";
+            document.getElementById("time").style.display = "";
+            document.getElementsByClassName("time")[0].style.display = "";
+            document.getElementById("people").style.display = "";
+            document.getElementsByClassName("people")[0].style.display = "";
+
+
+        }
+
+        class Prenotazione {
+    constructor(data,ora,persone) {
+        this.data = data;
+        this.ora = ora;
+        this.persone = persone;
+        this.ordini = [];
+    }}
+
+    function aggiungiPrenotazione(){
+
+        const data = document.getElementById("date").value;
+        const ora = document.getElementById("time").value;
+        const persone = document.getElementById("people").value;
+
+        if(persone > 0){
+            const prenotazione = new Prenotazione(data,ora,persone)
+            const email = document.getElementById("email").value;
+            const persona = caricaDalLocalStorage(email);
+            persona.prenotazioni.push(prenotazione);
+
+             // Salva l'utente aggiornato nel localStorage
+             salvaNelLocalStorage(email, persona);
+
+            window.location.href = `menu.html?email=${email}&data=${data}&prenotazione=${prenotazione}`;
+        }
+    }
+    </script>
+</body>
+</html>

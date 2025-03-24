@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante Yang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- PRESENTAZIONE -->
+        <div class="presentazione">
+            <h1>Ristorante Yang</h1>
+        </div>
+        <div class="title">
+        <h2 id="titolo"></h2>
+        <p class="roll">Roll Classici</p>
+       </div> 
+
+         <!-- PRENOTAZIONE -->
+    <div class="prenotazione">
+
+        <!-- ORDINE -->
+        <div id="a" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img1"><img src="immagini/nigiri1.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di orata</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di orata</div>
+               <div id="cod" class="descrizione"><span>1.00</span>$</div>
+           </div>
+           <div class="bar"><button id="1" class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="b" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img2"><img src="immagini/nigiri2.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di salmone</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di salmone</div>
+               <div id="cod" class="descrizione"><span>2.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+
+       <div id="c" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img2"><img src="immagini/nigiri3.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di tonno</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di tonno</div>
+               <div id="cod" class="descrizione"><span>2.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="d" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img3"><img src="immagini/nigiri4.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri spigola</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di spigola</div>
+               <div id="cod" class="descrizione"><span>3.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+       
+       <div id="e" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img4"><img src="immagini/nigiri5.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di gambero</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperto con un gambero</div>
+               <div id="cod" class="descrizione"><span>3.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="f" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img5"><img src="immagini/nigiri6.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di ricciola</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di ricciola</div>
+               <div id="cod" class="descrizione"><span>3.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+       
+       <div id="g" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img6"><img src="immagini/nigiri7.png" alt=""></div>
+               <div id="tuna" class="descrizione">Nigiri di pesce spada</div>
+               <div id="salmon" class="descrizione">Polpetta di riso ricoperta con una fettina di pesce spada</div>
+               <div id="cod" class="descrizione"><span>3.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+
+       <p class="rollspecial">Roll Speciali</p>
+   
+       <div id="h" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img7"><img src="immagini/nigiri8.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di Squalo</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una fettina di  squalo</div>
+               <div id="cod2" class="descrizione"><span>5.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+
+       <div id="i" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img8"><img src="immagini/nigiri9.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di pesce tropicale</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una fettina di  pesce pagliaccio</div>
+               <div id="cod2" class="descrizione"><span>5.00</span>$</div>
+           </div>
+           <div class="bar"><button id="1" class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="j" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img9"><img src="immagini/nigiri10.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di pesce profondo</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una fettina di  pesce Profundo</div>
+               <div id="cod2" class="descrizione"><span>5.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+
+       <div id="k" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img10"><img src="immagini/nigiri11.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di Polpo</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con un tentacolo di polpo</div>
+               <div id="cod2" class="descrizione"><span>5.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="l" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img11"><img src="immagini/nigiri12.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di Pesce-palla</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una fettina di  pesce-palla</div>
+               <div id="cod2" class="descrizione"><span>6.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+       
+       <div id="m" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img12"><img src="immagini/nigiri13.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di lepre marina</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una fettina di lepre marina</div>
+               <div id="cod2" class="descrizione"><span>7.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+   
+       <div id="n" class="piatti">
+           <div class="contenitore">
+               <div class="immagine" id="img13"><img src="immagini/nigiri14.png" alt=""></div>
+               <div id="tuna1" class="descrizione">Nigiri di seppia</div>
+               <div id="salmon2" class="descrizione">Polpetta di riso ricoperta con una seppia</div>
+               <div id="cod2" class="descrizione"><span>9.00</span>$</div>
+           </div>
+           <div class="bar"><button class="piu">+</button><p class="numeroPiatto">0</p></div>
+       </div>
+
+       <h2>Salse:</h2>
+           
+       <div class="salsa">
+            <div id="salsa1" class="salse"><img src="immagini/salsasoia.png" alt=""><input id="check1" class="check" type="checkbox"></div>
+            <div id="salsa2" class="salse"><img src="immagini/salsapiccante.png" alt=""><input id="check2"  class="check" type="checkbox"></div>
+            <div id="salsa3" class="salse"><img src="immagini/wasabi.png" alt=""><input id="check3"  class="check" type="checkbox"></div>
+        </div>
+
+       <h2>Ordine:</h2>
+   
+     
+   </div>
+       <div id="stickyDiv" class="statoOrdine"><p class="testo">Numeri piatti = <p class="numeriPiatti">0</p><p class="testo"> Totale = <p class="prezzo">0.00$</p></p></p></div>
+       <div id="targetDiv" class="totaleOrdine"></div>
+       <div id="opzioniOrdine"><button onclick="ordine()" class="conferma">Conferma</button><button onclick="annulla()" class="annulla">Annulla</button></div>
+  </div>
+  <!--<h2>Informazioni Utente:</h2>
+   <div id="informazioni"><p id="risultato"></p></div> --> 
+
+  <script>
+
+
+    // CONTATORE PIATTI TOTALI
+    let count = 0;
+    let prezzo = 0;
+
+      
+      // TASTI PIU E MENO
+  
+          function aggiungiListner(){
+          let piatto = document.getElementsByClassName("piatti")
+          for (let i = 0; i < piatto.length; i++) {
+              // TASTO PIU
+              let tastoPiu = piatto[i].getElementsByClassName("piu")[0];
+              // CLICK SUL PIU
+              tastoPiu.addEventListener("click", function(){
+                  let numero = parseInt(piatto[i].getElementsByClassName("numeroPiatto")[0].innerHTML);
+                  numero = numero + 1;
+                  piatto[i].getElementsByClassName("numeroPiatto")[0].innerHTML = numero; 
+                
+              //    AGGIORNA PREZZO TOTALE
+                  let prezzoPiatto = piatto[i].getElementsByClassName("descrizione")[2].getElementsByTagName("span")[0].innerHTML;
+                  prezzo = prezzo + parseFloat(prezzoPiatto);
+                  document.getElementsByClassName("prezzo")[0].innerHTML = prezzo + "$";
+
+              //    AGGIORNA PIATTI TOTALI;  
+                  let numeriPiatti = document.getElementsByClassName("numeriPiatti")[0];
+                  count = count + 1;
+                  numeriPiatti.innerHTML = count;
+              
+              // BOTTONE RIMUOVI
+              let button = document.createElement("button");
+              button.innerHTML = "Rimuovi";
+              button.style.marginTop = "5px";
+              button.style.fontSize = "4vw";
+              button.style.backgroundColor = "red";
+              button.style.color = "white";
+              button.style.width = "20%"
+              button.style.textAlign = "center";
+              button.style.justifyContent = "flex-end";
+              button.style.fontFamily = "Joystick";
+              button.style.borderRadius = "2em"
+              button.style.marginLeft = "auto"
+  
+              //CREAZIONE CLONE
+  
+              let clone = piatto[i].cloneNode(true);
+              let elemetidatogliere = clone.querySelector(".bar");
+              clone.style.border = "2px solid white";
+              clone.style.marginbottom = "0";
+              clone.appendChild(button)
+              elemetidatogliere.parentNode.removeChild(elemetidatogliere);
+              document.getElementsByClassName("totaleOrdine")[0].appendChild(clone);
+  
+              //BOTTONE CLONE
+              button.addEventListener("click",()=>{
+              //ELIMINAZIONE CLONE
+
+              // ELIMINAZIONE PIATTI
+               let numero = piatto[i].getElementsByClassName("numeroPiatto")[0].innerHTML;
+               count = count - 1;
+               numeriPiatti.innerHTML = count;
+
+               //ELIMINAZIONE PREZZO
+
+               let prezzoPiatto = piatto[i].getElementsByClassName("descrizione")[2].getElementsByTagName("span")[0].innerHTML;
+                prezzo = prezzo - parseFloat(prezzoPiatto);
+                document.getElementsByClassName("prezzo")[0].innerHTML = prezzo + "$";
+
+
+               piatto[i].getElementsByClassName("numeroPiatto")[0].innerHTML = numero - 1;
+               document.getElementsByClassName("totaleOrdine")[0].removeChild(clone);        
+              })        
+              });
+  
+          }
+          
+      }
+  
+  
+      aggiungiListner();
+
+      // BARRA INFONDO
+  
+      window.addEventListener('scroll', function () {
+    const stickyDiv = document.getElementById('stickyDiv');
+    const targetDiv = document.getElementById('targetDiv');
+    const targetRect = targetDiv.getBoundingClientRect();
+
+    // Punto in cui il div sticky si attacca (es. quando il target è a 850px dalla cima)
+    const triggerPoint = 850;
+
+    if (targetRect.top <= triggerPoint) {
+        // Quando il target raggiunge il punto di trigger, il stickyDiv diventa statico
+        stickyDiv.style.position = 'static';
+        stickyDiv.style.width = '80%'; // Larghezza ridotta
+        stickyDiv.style.margin = '0 auto'; // Centrato
+        stickyDiv.style.textAlign = 'center';
+        stickyDiv.style.fontSize = '100%';
+
+    } else {
+        // Quando il stickyDiv è fixed, occupa il 100% della larghezza della finestra
+        stickyDiv.style.position = 'fixed';
+        stickyDiv.style.bottom = '0';
+        stickyDiv.style.left = '0'; // Allinea a sinistra
+        stickyDiv.style.right = '0'; // Allinea a destra
+        stickyDiv.style.width = '100%'; // Occupa tutta la larghezza
+        stickyDiv.style.maxWidth = '100%'; // Impedisce overflow
+        stickyDiv.style.textAlign = 'center';
+        stickyDiv.style.overflow = 'hidden'; // Nasconde eventuali contenuti che fuoriescono
+    }
+
+});
+
+      // CHECKBOX
+
+    let checkboxSoia = document.getElementsByClassName("check")[0];
+    let checkboxPiccante = document.getElementsByClassName("check")[1];
+    let checkboxWasabi = document.getElementsByClassName("check")[2];
+
+    let clon1 = null; 
+    let clon2 = null;
+    let clon3 = null;
+
+checkboxSoia.addEventListener('click', function() {
+    if (this.checked) {
+        
+        clon1 = document.getElementById("salsa1").cloneNode(true);
+        clon1.style.width = "20%";
+        clon1.style.backgroundColor = "transparent";
+        clon1.style.marginTop = "2%";
+        clon1.style.marginLeft = "auto";
+        clon1.style.marginRight = "auto";
+        document.getElementsByClassName("totaleOrdine")[0].append(clon1);
+
+
+        let elemetidatogliere = clon1.querySelector("#check1");
+        if (elemetidatogliere) {
+            elemetidatogliere.parentNode.removeChild(elemetidatogliere);
+        }
+    } else {
+      
+        if (clon1 && clon1.parentNode) {
+            clon1.parentNode.removeChild(clon1);
+        }
+    }
+});
+    
+checkboxPiccante.addEventListener('click', function() {
+    if (this.checked) {
+        
+        clon2 = document.getElementById("salsa2").cloneNode(true);
+        clon2.style.width = "20%";
+        clon2.style.backgroundColor = "transparent";
+        clon2.style.marginTop = "2%";
+        clon2.style.marginLeft = "auto";
+        clon2.style.marginRight = "auto";
+
+        document.getElementsByClassName("totaleOrdine")[0].append(clon2);
+
+
+        let elemetidatogliere = clon2.querySelector("#check2");
+        if (elemetidatogliere) {
+            elemetidatogliere.parentNode.removeChild(elemetidatogliere);
+        }
+    } else {
+      
+        if (clon2 && clon2.parentNode) {
+            clon2.parentNode.removeChild(clon2);
+        }
+    }
+});
+
+checkboxWasabi.addEventListener('click', function() {
+    if (this.checked) {
+        
+        clon3 = document.getElementById("salsa3").cloneNode(true);
+        clon3.style.width = "20%";
+        clon3.style.backgroundColor = "transparent";
+        clon3.style.marginTop = "2%";
+        clon3.style.marginLeft = "auto";
+        clon3.style.marginRight = "auto";
+        document.getElementsByClassName("totaleOrdine")[0].append(clon3);
+
+
+        let elemetidatogliere = clon3.querySelector("#check3");
+        if (elemetidatogliere) {
+            elemetidatogliere.parentNode.removeChild(elemetidatogliere);
+        }
+    } else {
+      
+        if (clon3 && clon3.parentNode) {
+            clon3.parentNode.removeChild(clon3);
+        }
+    }
+});
+
+function salvaNelLocalStorage(chiave, valore) {
+    localStorage.setItem(chiave, JSON.stringify(valore));
+}
+
+function caricaDalLocalStorage(chiave) {
+    const valore = localStorage.getItem(chiave);
+    return valore ? JSON.parse(valore) : null;
+}
+
+// Funzioni di supporto
+function trovaPersona(email) {
+    const persona = JSON.parse(localStorage.getItem(email));
+    return persona || null;
+}
+
+// Recupera la query string dall'URL
+const queryString = window.location.search;
+
+// Crea un oggetto URLSearchParams
+const parametri = new URLSearchParams(queryString);
+
+// Recupera il valore del parametro "email" e "data"
+const email = parametri.get("email");
+const data = parametri.get("data");
+const prenotazione = parametri.get("prenotazione");
+
+console.log("Email ricevuta:", email);
+console.log("Data ricevuta:", data);
+
+class Ordine {
+    constructor(quantita, costo) {
+        this.quantita = quantita;
+        this.costo = costo;
+    }
+}
+
+function effettuaOrdine(email, data, quantita, costo) {
+    // Trova la persona nel localStorage
+    const persona = trovaPersona(email);
+
+    if (!persona) {
+        console.log("Persona non trovata.");
+        return;
+    }
+
+    persona.prenotazioni = persona.prenotazioni.filter((p, index, self) =>
+        index === self.findIndex(pr => pr.data === p.data)
+    );
+
+    // Cerca una prenotazione esistente con la stessa data
+    const prenotazioneEsistente = persona.prenotazioni.find(p => p.data === data);
+
+    if (prenotazioneEsistente) {
+        // Se esiste già una prenotazione con la stessa data, aggiungi l'ordine a quella prenotazione
+        const ordine = new Ordine(quantita, costo);
+        prenotazioneEsistente.ordini.push(ordine);
+
+        console.log("Ordine aggiunto a una prenotazione esistente.");
+    } else {
+        // Se non esiste una prenotazione con la stessa data, non fare nulla
+        console.log("Nessuna prenotazione trovata con questa data. L'ordine non verrà aggiunto.");
+        return;
+    }
+
+    // Salva la persona aggiornata nel localStorage
+    salvaNelLocalStorage(email, persona);
+}
+
+function ordine() {
+    // Recupera i valori dal DOM
+    const quantita = parseInt(document.getElementsByClassName("numeriPiatti")[0].textContent);
+    const costo = parseFloat(document.getElementsByClassName("prezzo")[0].textContent);
+
+    if (quantita > 0) {
+        // Effettua l'ordine
+        effettuaOrdine(email, data, quantita, costo);
+
+        // Resetta i valori nel DOM
+        document.getElementsByClassName("numeriPiatti")[0].textContent = "0";
+        document.getElementsByClassName("prezzo")[0].textContent = "0";
+        const elementi = document.getElementsByClassName("numeroPiatto");
+
+        for (let elemento of elementi) {
+        elemento.textContent = "0"; // Azzera il contenuto
+        }
+
+        const div = document.getElementsByClassName("totaleOrdine")[0];
+        if (div) {
+        div.innerHTML = ""; }
+
+        // Visualizza i dati aggiornati
+        const persona = caricaDalLocalStorage(email);
+        document.getElementById("risultato").textContent = JSON.stringify(persona);
+    } else {
+        console.log("La quantità deve essere maggiore di 0.");
+    }
+}
+
+
+function annulla(){
+    const div = document.getElementsByClassName("totaleOrdine")[0];
+    div.innerHTML = "";
+    document.getElementsByClassName("numeriPiatti")[0].textContent = "0";
+    document.getElementsByClassName("prezzo")[0].textContent = "0";
+    const elementi = document.getElementsByClassName("numeroPiatto");
+
+    for (let elemento of elementi) {
+    elemento.textContent = "0"; // Azzera il contenuto
+    }   
+}
+  </script>
+    
+</body>
+</html>
